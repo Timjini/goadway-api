@@ -10,7 +10,7 @@ const categoryRoute = require('./routes/categories');
 
 const multer = require('multer');
 
-require('dotenv').config({ path: './.env' });
+require('dotenv').config({path:__dirname+'/.env'});
 
 
 
