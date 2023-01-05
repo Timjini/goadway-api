@@ -7,10 +7,11 @@ const authRoute = require('./routes/auth');
 const userRoute = require('./routes/users');
 const serviceRoute = require('./routes/services');
 const categoryRoute = require('./routes/categories');
+const projectRoute = require('./routes/projects');
 
 const multer = require('multer');
 
-require('dotenv').config({path: '.env'});
+require('dotenv').config({path:__dirname+'/.env'});
 
 
 mongoose.set("strictQuery", false);
@@ -48,6 +49,7 @@ app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
 app.use('/api/services', serviceRoute);
 app.use('/api/categories', categoryRoute);
+app.use('/api/projects', projectRoute);
 
 app.listen(process.env.PORT || 3000 , () => {
     console.log("Backend server is running!");
