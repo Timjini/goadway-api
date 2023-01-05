@@ -10,9 +10,10 @@ const categoryRoute = require('./routes/categories');
 
 const multer = require('multer');
 
+require('dotenv').config({ path: './.env' });
 
 
-dontenv.config();
+
 
 mongoose.set("strictQuery", false);
 
