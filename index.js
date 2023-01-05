@@ -10,12 +10,12 @@ const categoryRoute = require('./routes/categories');
 
 const multer = require('multer');
 
-require('dotenv').config();
+require('dotenv').config({path: '.env'});
 
 
 mongoose.set("strictQuery", false);
 
-mongoose.connect(process.env.MONGO_URL, { 
+mongoose.connect(process.env.MONGO_URI, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true
 }).then(() => {
@@ -53,3 +53,8 @@ app.listen(process.env.PORT || 3000 , () => {
     console.log("Backend server is running!");
 }
 );
+
+// app.listen( 3000 , () => {
+//     console.log("Backend server is running!");
+// }
+// );
