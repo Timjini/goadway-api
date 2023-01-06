@@ -63,12 +63,12 @@ app.use('/api/categories', categoryRoute);
 app.use('/api/projects', projectRoute);
 
 
-// app.listen(process.env.PORT || 3000 , () => {
-//     console.log("Backend server is running!");
-// }
-// );
-
-app.listen( 3000 , () => {
+app.listen(process.env.PORT || 3000 , () => {
     console.log("Backend server is running!");
 }
 );
+
+// app.listen( 3000 , () => {
+//     console.log("Backend server is running!");
+// }
+// );
